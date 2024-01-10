@@ -1,3 +1,6 @@
+# devl
+## }:-)
+
 main file will be 		  `/main.go`
 file running quizzes will be      `/quiz.go`
 quizzes will be stored in 	  `/quizzes/<language>.txt`
@@ -7,11 +10,11 @@ challenges will be stored in      `/challenges/<challenge#>.<language>`
 
 Structure:
 ```
-/cli-learn
+/devl
     |____ main.go
     |____ challenge.go
     |____ quiz.go
-    |____ Makefile
+    |____ init.sh
     |____ quizzes/
 	     |____ python.txt
              |____ go.txt
