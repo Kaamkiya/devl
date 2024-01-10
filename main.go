@@ -1,0 +1,40 @@
+package main
+
+import (
+	"os"
+	"fmt"
+)
+
+func main() {
+	if len(os.Args) == 1 {
+		fmt.Println("Usage: devl [<options>] <command> [<args>]")
+		os.Exit(-1)
+	}
+
+	switch os.Args[1] {
+	case "quiz":
+		if len(os.Args) < 3 {
+			fmt.Println("Usage: devl quiz <language>")
+			os.Exit(-1)
+		}
+		quiz(os.Args[2])
+		os.Exit(0)
+	case "cheatsheet":
+		if len(os.Args) < 3 {
+			fmt.Println("Usage: devl cheatsheet <language>")
+			os.Exit(-1)
+		}
+		cheatsheet(os.Args[2])
+		os.Exit(0)
+	case "help":
+		fmt.Print(`Usage: devl [<options>] <command> [<args>]
+
+Options:
+  -v            print version info and exit
+
+Commands:
+  quiz          quiz you on whatever you put in <args>
+  cheatsheet    print a cheatsheet for the parameter passed to <args>
+`)
+	}
+}
