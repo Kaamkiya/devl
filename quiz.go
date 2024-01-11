@@ -14,7 +14,7 @@ func quiz(lang string) {
 	if err != nil {
 		panic(err)
 	}
-	questions := strings.Split(string(data))
+	questions := strings.Split(string(data), "---")
 
 	ansData, err := os.ReadFile("./quizzes/answers.json")
 
