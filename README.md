@@ -1,4 +1,5 @@
-![](https://cdn0.iconfinder.com/data/icons/emojis-flat-pixel-perfect-w-skin-tone-2/64/c3_emoji-emoticon-face-devil-happy-smile-512.png)
+<img align="center" src="https://cdn0.iconfinder.com/data/icons/emojis-flat-pixel-perfect-w-skin-tone-2/64/c3_emoji-emoticon-face-devil-happy-smile-512.png" width="100"/>
+
 # devl
 
 [![](https://img.shields.io/badge/Website-000000.svg?style=for-the-badge&logo=web&logoColor=white)](https://kaamkiya.github.io/devl)
