@@ -1,2 +1,33 @@
-Which of the following is a valid syntax for a lambda function?
+1. Which of the following is a valid syntax for a lambda function?
+
+A) <code>mul: lambda x, y = x * y</code>
+B) <code>lambda mul: x, y = x * y</code>
+C) <code>mul = lambda x, y: x * y</code>
+
+---
+2. Which of the following is not a valid Python data type?
+
+A) int
+B) array
+C) str
+D) dict
+E) tuple
+F) list
+
+---
+3. Do <code>0.1 + 0.1 + 0.1</code> and <code>0.1 * 3</code> output the same thing?
+
+A) Yes
+B) No
+
+---
+4. What does the following code output?
+<code>
+a = 'Hello, World!',
+print(a[0])
+</code>
+
+A) H
+B) a[0]
+C) Hello, World!
 
