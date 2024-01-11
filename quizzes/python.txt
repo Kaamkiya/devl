@@ -1,4 +1,4 @@
-1. Which of the following is a valid syntax for a lambda function?
+1. Which of the following is valid syntax for a lambda function?
 
 A) <code>mul: lambda x, y = x * y</code>
 B) <code>lambda mul: x, y = x * y</code>

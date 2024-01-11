@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"os"
+	"strings"
 )
 
 func quiz(lang string) {
@@ -13,13 +14,23 @@ func quiz(lang string) {
 	if err != nil {
 		panic(err)
 	}
+	questions := strings.Split(string(data))
+
 	ansData, err := os.ReadFile("./quizzes/answers.json")
 
-	var questions map[string]interface{}
+	var answers map[string]interface{}
 
-	err = json.Unmarshal(ansData, &questions)
+	err = json.Unmarshal(ansData, &answers)
 	if err != nil {
 		panic(err)
 	}
-	fmt.Println(string(data), questions)
+	//fmt.Println(questions, answers)
+
+	inputs := [len(questions)]string{}
+	for i, question := range questions {
+		fmt.Println(question)
+		fmt.Scan(&inputs[i])
+	}
+
+	fmt.Println(inputs)
 }
