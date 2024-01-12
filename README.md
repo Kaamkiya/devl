@@ -1,4 +1,4 @@
-<img align="center" src="https://cdn0.iconfinder.com/data/icons/emojis-flat-pixel-perfect-w-skin-tone-2/64/c3_emoji-emoticon-face-devil-happy-smile-512.png" width="100"/>
+![devl](https://socialify.git.ci/Kaamkiya/devl/image?description=1&font=Source%20Code%20Pro&forks=1&issues=1&language=1&name=1&owner=1&pattern=Circuit%20Board&pulls=1&stargazers=1&theme=Dark)
 
 # devl
 
@@ -14,15 +14,33 @@ to cheatsheets, resources, and everything in between, right from the CLI.
 Also, because I hate having dependencies with a passion, devl has none.
 
 ## Installation
-[Go](https://go.dev/dl) is required for building the project. You can delete it right after if you
+### Prerequisites
+* [Go](https://go.dev/dl) is required for building the project. You can delete it right after if you
 don't want to keep it, though.
+* [Git](https://git-scm.com/) is required for cloning the repo.
+* curl is needed to download the script (should be preinstalled. See [here](#no-curl) if you can't use curl.)
 
-On linux, run the following command:
+On Linux/MacOS, run the following command:
 ```
 curl https://raw.githubusercontent.com/Kaamkiya/devl/main/init.sh | sh
 ```
 
 Not yet available for Windows.
+
+## Features
+
+* Cheatsheets
+* Quizzes
+<!--* Challenges-->
+<!--* Project readme generator-->
+
+---
+
+## Todo
+* [ ] Add more quizzes
+* [ ] Add challenges
+* [ ] Add README generator
+* [ ] Add Windows compatibility
 
 ## Notes for developers
 main file will be 		  `/main.go`
