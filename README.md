@@ -11,6 +11,8 @@ Devl was created as a
 people learn to code. It was also built so that everyone would have easy access
 to cheatsheets, resources, and everything in between, right from the CLI.
 
+Devl stands for DEVeloper + Learn. Only after did I realize that I had a perfect icon :)
+
 Also, because I hate having dependencies with a passion, devl has none.
 
 ## Installation
@@ -21,7 +23,7 @@ don't want to keep it, though.
 * curl is needed to download the script (should be preinstalled. See [here](#no-curl) if you can't use curl.)
 
 On Linux/MacOS, run the following command:
-```
+```bash
 curl https://raw.githubusercontent.com/Kaamkiya/devl/main/init.sh | sh
 ```
 
