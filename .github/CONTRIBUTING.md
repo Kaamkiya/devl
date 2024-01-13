@@ -38,6 +38,8 @@ What type of PR is this?
 
 ```
 
+If adding/updating a quiz, please add all answers to [answers.json](../quizzes/answers.json).
+
 ---
 **No swear words, hate, or anything similar. Any contributions not following
 the [Code of Conduct](./CODE_OF_CONDUCT.md) will be ignored or archived.**
