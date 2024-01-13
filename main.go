@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"os"
 )
@@ -26,6 +27,21 @@ func main() {
 		}
 		cheatsheet(os.Args[2])
 		os.Exit(0)
+	case "resource":
+		if len(os.Args) < 3 {
+			fmt.Println("Usage: devl resource <thing>")
+			os.Exit(-1)
+		}
+		data, err := os.ReadFile("./resources.json")
+		if err != nil {
+			panic(err)
+		}
+		resources := make(map[string][]string)
+		json.Unmarshal(data, &resources)
+		for _, resource := range resources[os.Args[2]] {
+			fmt.Println(" . " + resource)
+		}
+
 	case "help":
 		fmt.Print(`Usage: devl [<options>] <command> [<args>]
 
