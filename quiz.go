@@ -14,23 +14,40 @@ func quiz(lang string) {
 	if err != nil {
 		panic(err)
 	}
-	questions := strings.Split(string(data), "---")
+	qs := strings.Replace(string(data), "<code>", "\033[38;2;170;170;170m", 100)
+	qs = strings.Replace(qs, "</code>", "\033[0m", 100)
+	questions := strings.Split(qs, "---")
 
 	ansData, err := os.ReadFile("./quizzes/answers.json")
 
-	var answers map[string]interface{}
+	answers := make(map[string][]string)
 
 	err = json.Unmarshal(ansData, &answers)
 	if err != nil {
 		panic(err)
 	}
-	//fmt.Println(questions, answers)
 
-	inputs := [len(questions)]string{}
-	for i, question := range questions {
-		fmt.Println(question)
-		fmt.Scan(&inputs[i])
+	inputs := []string{}
+	for _, question := range questions {
+		fmt.Print(question)
+		var in string
+		fmt.Scan(&in)
+		inputs = append(inputs, strings.ToLower(in))
 	}
 
-	fmt.Println(inputs)
+	fmt.Println(inputs, answers[lang])
+
+	totalQuestions := len(inputs) // total question count
+	correctAnswers := 0
+	for i, answer := range answers[lang] {
+		if inputs[i] != answer {
+			fmt.Print("\033[31;1m")
+		} else {
+			correctAnswers++
+			fmt.Print("\033[32;1m")
+		}
+
+		fmt.Println(string(i) + ". You inputted: " + inputs[i] + "; Correct answer: " + answer)
+	}
+	fmt.Printf("Score in percent: %%f\n", correctAnswers / totalQuestions)
 }
