@@ -51,6 +51,7 @@ Options:
 Commands:
   quiz          quiz you on whatever you put in <args>
   cheatsheet    print a cheatsheet for the parameter passed to <args>
+  resource      print a list of links to resources for your topic
 `)
 	}
 }
