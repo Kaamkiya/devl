@@ -1,5 +1,5 @@
 {
-  "PROGRAMMING LANGUAGES": "",
+  "LANGUAGES":      [],
   "abap":           ["https://learning.sap-press.com/abap", "https://exercism.org/abap"],
   "ada":            ["https://learn.adacore.com/courses/intro-to-ada/"],
   "apl":            ["https://tryapl.org/", "https://xpqz.github.io/learnapl/intro.html"],
@@ -55,5 +55,18 @@
   "livescript":     ["https://learnxinyminutes.com/docs/livescript", "https://livescript.net/"],
   "logtalk":        ["https://learnxinyminutes.com/docs/logtalk", "https://logtalk.org/documentation.html"],
   "lolcode":        ["https://learnxinyminutes.com/docs/LOLCODE", "http://www.lolcode.org/"],
-  "lua":            ["https://learnxinyminutes.com/docs/lua", "https://www.lua.org/pil/contents.html", "https://lua.org/start.html"]
+  "lua":            ["https://learnxinyminutes.com/docs/lua", "https://www.lua.org/pil/contents.html", "https://lua.org/start.html"],
+  "m":              ["https://learnxinyminutes.com/docs/m", "https://www.cs.uni.edu/~okane/source/MUMPS-MDH/MumpsTutorial.pdf"],
+  "markdown":       ["https://learnxinyminutes.com/docs/markdown", "https://www.markdownguide.org/basic-syntax/"],
+  "matlab":         ["https://learnxinyminutes.com/docs/matlab"],
+  "mercury":        ["https://learnxinyminutes.com/docs/mercury", "https://mercurylang.org/documentation/papers/book.pdf", "https://mercury-in.space/crash.html", "https://github.com/Mercury-Language/mercury/wiki/Tutorial"],
+  "mongodb":        ["https://learnxinyminutes.com/docs/mongodb", "https://www.mongodb.com/docs/manual/"],
+  "montilang":      ["https://learnxinyminutes.com/docs/montilang", "https://github.com/leowhitehead/MontiLang"],
+  "moonscript":     ["https://learnxinyminutes.com/docs/moonscript", "https://moonscript.org/reference/"],
+  "neat":           ["https://learnxinyminutes.com/docs/neat", "https://github.com/FeepingCreature/fcc/wiki/Introduction"],
+  "nim":            ["https://learnxinyminutes.com/docs/nim", "https://nim-lang.org/documentation.html", "https://narimiran.github.io/nim-basics/"],
+  "nix":            ["https://learnxinyminutes.com/docs/nix", "https://nixos.org/manual/nix/stable/language/index.html"],
+
+  "CONCEPTS":       [],
+  "oop":            []
 }
