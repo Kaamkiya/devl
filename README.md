@@ -5,6 +5,16 @@
 [![](https://img.shields.io/badge/Website-000000.svg?style=for-the-badge&logo=web&logoColor=white)](https://kaamkiya.github.io/devl)
 ![](https://img.shields.io/badge/Made-with-Go-%23aaaaff.svg?style=for-the-badge&logo=go&logoColor=white)
 
+## Table of Contents
+* [About](#about-devl)
+* [Installation](#installation)
+  * [Prerequisites](#prerequisites)
+* [Features](#features)
+* [Contributing](#contributing)
+* [Todo](#todo)
+* [Notes for devs](#notes-for-developers)
+
+
 ## About devl
 Devl was created as a 
 [command-line app](https://en.wikipedia.org/wiki/Console_application) to help
@@ -35,23 +45,19 @@ Not yet available for Windows.
 * Quizzes
 <!--* Challenges-->
 <!--* Project readme generator-->
+* Resource finder
 
----
+## Contributing
+All contributions welcome! See [CONTRIBUTING.md](.github/CONTRIBUTING.md) for details.
 
 ## Todo
 * [ ] Add more quizzes
 * [ ] Add challenges
+* [ ] Self-host cheatsheets instead of sourcing learnxinyminutes
 * [ ] Add README generator
 * [ ] Add Windows compatibility
 
 ## Notes for developers
-main file will be 		  `/main.go`
-file running quizzes will be      `/quiz.go`
-quizzes will be stored in 	  `/quizzes/<language>.txt`
-file running challenges will be   `/challenge.go`
-challenges will be stored in      `/challenges/<challenge#>.<language>`
-
-
 Structure:
 ```
 /devl
