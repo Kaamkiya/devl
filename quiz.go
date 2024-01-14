@@ -10,7 +10,9 @@ import (
 func quiz(lang string) {
 	fmt.Println(lang + " Quiz")
 
-	data, err := os.ReadFile(DevlDir + "/quizzes/" + lang + ".txt")
+	devlDir := DevlDir()
+
+	data, err := os.ReadFile(devlDir + "/quizzes/" + lang + ".txt")
 	if err != nil {
 		panic(err)
 	}
@@ -18,7 +20,7 @@ func quiz(lang string) {
 	qs = strings.Replace(qs, "</code>", "\033[0m", 100)
 	questions := strings.Split(qs, "---")
 
-	ansData, err := os.ReadFile(DevlDir + "/quizzes/answers.json")
+	ansData, err := os.ReadFile(devlDir + "/quizzes/answers.json")
 
 	answers := make(map[string][]string)
 

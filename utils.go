@@ -4,6 +4,8 @@ import (
 	"bufio"
 	"fmt"
 	"net/http"
+	"path/filepath"
+	"runtime"
 	"strings"
 )
 
@@ -29,4 +31,12 @@ func gitignore() {
 	for scanner.Scan() {
 		fmt.Println(scanner.Text())
 	}
+}
+
+func DevlDir() string {
+	_, filename, _, ok := runtime.Caller(0)
+	if !ok {
+		panic("Somehow, this file does not exist.")
+	}
+	return filepath.Dir(filename)
 }
