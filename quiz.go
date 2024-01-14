@@ -10,7 +10,7 @@ import (
 func quiz(lang string) {
 	fmt.Println(lang + " Quiz")
 
-	data, err := os.ReadFile("./quizzes/" + lang + ".txt")
+	data, err := os.ReadFile(DevlDir + "/quizzes/" + lang + ".txt")
 	if err != nil {
 		panic(err)
 	}
@@ -18,7 +18,7 @@ func quiz(lang string) {
 	qs = strings.Replace(qs, "</code>", "\033[0m", 100)
 	questions := strings.Split(qs, "---")
 
-	ansData, err := os.ReadFile("./quizzes/answers.json")
+	ansData, err := os.ReadFile(DevlDir + "/quizzes/answers.json")
 
 	answers := make(map[string][]string)
 
@@ -49,5 +49,5 @@ func quiz(lang string) {
 
 		fmt.Println(string(i) + ". You inputted: " + inputs[i] + "; Correct answer: " + answer)
 	}
-	fmt.Printf("Score in percent: %%f\n", correctAnswers / totalQuestions)
+	fmt.Printf("Score in percent: %d\n", correctAnswers / totalQuestions)
 }

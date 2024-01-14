@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"os"
+	"path/filepath"
 )
 
 func main() {
@@ -11,6 +12,12 @@ func main() {
 		fmt.Println("Usage: devl [<options>] <command> [<args>]")
 		os.Exit(-1)
 	}
+
+	_, filename, _, ok := runtime.Caller(0)
+	if !ok {
+		panic("Somehow this file doesn't exist.")
+	}
+	DevlDir := filepath.Dir(filename)
 
 	switch os.Args[1] {
 	case "quiz":
@@ -34,7 +41,7 @@ func main() {
 			fmt.Println("Usage: devl resource <thing>")
 			os.Exit(-1)
 		}
-		data, err := os.ReadFile("./resources.json")
+		data, err := os.ReadFile(DevlDir + "/resources.json")
 		if err != nil {
 			panic(err)
 		}
