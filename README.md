@@ -44,8 +44,8 @@ Not yet available for Windows.
 * Cheatsheets
 * Quizzes
 <!--* Challenges-->
-<!--* Project readme generator-->
 * Resource finder
+* Gitignore generator
 
 ## Contributing
 All contributions welcome! See [CONTRIBUTING.md](.github/CONTRIBUTING.md) for details.
