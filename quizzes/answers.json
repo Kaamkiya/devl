@@ -1,3 +1,4 @@
 {
-  "python": ["c", "b", "b", "c"]
+  "python": ["c", "b", "b", "c"],
+  "javascript": ["b", "b", "a", "e", "g", "d", "b", "b", "a", "c", "c"]
 }

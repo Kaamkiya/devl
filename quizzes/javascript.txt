@@ -1,0 +1,103 @@
+1. <code>NaN == NaN</code>?
+
+A) true
+B) false
+
+---
+
+2. What does <code>(0.1 + 0.1 + 0.1).toPrecision(4)</code> output?
+
+A) 0.3
+B) '0.3000'
+C) .3000
+D) '0.3'
+
+---
+
+3. Is JavaScript dynamically or statically typed?
+
+A) dynamically
+B) statically
+
+---
+
+4. Who created JavaScript?
+
+A) Larry Page
+B) James Gosling
+C) Ada Lovelace
+D) Alan Turing
+E) Brendan Eich
+F) Bjarne Stroustrup
+G) Dennis Ritchie
+
+---
+
+4. Where is the official JavaScript documentation?
+
+A) developer.mozilla.org/
+B) javascript.com/
+C) javascript.info/
+D) js.org/
+E) javascript.dev/
+F) jsdoc.app/
+G) None of the Above
+
+---
+
+5. What is the output of the code below?
+<code>
+let arr = [1, 2, 3, 4, 5, -6, 7];
+arr.length = 0;
+console.log(arr);
+</code>
+
+A) 0
+B) undefined
+C) null
+D) []
+
+---
+
+6. Which of the following methods adds to the start of an array?
+
+A) <code>pop()</code>
+B) <code>unshift()</code>
+C) <code>push()</code>
+
+---
+
+7. How do you exit a loop?
+
+A) <code>cancel</code>
+B) <code>break</code>
+C) <code>end</code>
+D) <code>stop</code>
+
+---
+
+8. What is the output of the following code?
+<code>
+console.log(3 > 2 > 1 === false)
+</code>
+
+A) True
+B) False
+C) Error
+
+---
+
+9. The <code>getMonth</code> returns the month as a...
+
+A) string
+B) array
+C) number
+
+---
+
+10. Which of these is an invalid variable name?
+
+A) <code>$var</code>
+B) <code>_var</code>
+C) <code>1var</code>
+D) A and C
