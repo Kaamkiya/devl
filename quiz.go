@@ -51,5 +51,5 @@ func quiz(lang string) {
 
 		fmt.Println(string(i) + ". You inputted: " + inputs[i] + "; Correct answer: " + answer)
 	}
-	fmt.Printf("Score in percent: %d\n", correctAnswers / totalQuestions)
+	fmt.Println("Score in percent:", string(correctAnswers / totalQuestions))
 }
