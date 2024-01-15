@@ -39,6 +39,15 @@ curl https://raw.githubusercontent.com/Kaamkiya/devl/main/init.sh | sh
 
 Not yet available for Windows.
 
+### Uninstalling
+
+On Linux/MacOS:
+```bash
+rm -rf ~/.devl
+```
+
+I don't yet know how to do this on Windows. Feel free to open an issue if you do.
+
 ## Features
 
 * Cheatsheets
