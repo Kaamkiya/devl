@@ -29,6 +29,8 @@ func main() {
 		os.Exit(0)
 	case "gitignore":
 		gitignore()
+	case "loc":
+		loc()
 	case "resource":
 		if len(os.Args) < 3 {
 			fmt.Println("Usage: devl resource <thing>")
@@ -55,6 +57,7 @@ Commands:
   cheatsheet    print a cheatsheet for the parameter passed to <args>
   gitignore     print a gitignore for the languages you enter
   resource      print a list of links to resources for your topic
+  loc           prints the amount of lines of characters by file extension in the current directory
   help		print this help message and exit
 `)
 	}

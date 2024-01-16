@@ -3,7 +3,9 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"io/fs"
 	"net/http"
+	"os"
 	"path/filepath"
 	"runtime"
 	"strings"
@@ -30,6 +32,34 @@ func gitignore() {
 	scanner := bufio.NewScanner(res.Body)
 	for scanner.Scan() {
 		fmt.Println(scanner.Text())
+	}
+}
+
+func loc() {
+	// TODO: implement a lines of code finder
+	extensions := make(map[string]int)
+	filepath.WalkDir(".", func(s string, d fs.DirEntry, err error) error {
+		if err != nil {
+			return err
+		}
+		if !d.IsDir() && string(s[0]) != "." {
+			data, err := os.ReadFile(s)
+			if err != nil {
+				panic(err)
+			}
+
+			extension := strings.Split(s, ".")[len(strings.Split(s, ".")) - 1]
+			if extensions[extension] != 0 {
+				extensions[extension] = len(strings.Split(string(data), "\n"))
+			} else {
+				extensions[extension] += len(strings.Split(string(data), "\n"))
+			}
+		}
+		return nil
+	})
+
+	for key := range extensions {
+		fmt.Printf("%s: %d lines\n", key, extensions[key])
 	}
 }
 
