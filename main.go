@@ -7,20 +7,20 @@ import (
 )
 
 func main() {
-	if len(os.Args) == 1 {
-		fmt.Println("Usage: devl [<options>] <command> [<args>]")
-		os.Exit(-1)
+	if len(os.Args) == 1 { // if the only argument was devl...
+		fmt.Println("Usage: devl [<options>] <command> [<args>]") // print a simple help message
+		os.Exit(-1) // and exit with error
 	}
 
 	switch os.Args[1] {
-	case "quiz":
-		if len(os.Args) < 3 {
+	case "quiz": // if the thing the user wants to do is a quiz...
+		if len(os.Args) < 3 { // we need the thing to quiz them on
 			fmt.Println("Usage: devl quiz <language>")
 			os.Exit(-1)
 		}
-		quiz(os.Args[2])
+		quiz(os.Args[2]) // if they provided it, quiz them
 		os.Exit(0)
-	case "cheatsheet":
+	case "cheatsheet": // same as above, but with cheatsheets
 		if len(os.Args) < 3 {
 			fmt.Println("Usage: devl cheatsheet <language>")
 			os.Exit(-1)
@@ -28,25 +28,27 @@ func main() {
 		cheatsheet(os.Args[2])
 		os.Exit(0)
 	case "gitignore":
-		gitignore()
+		gitignore() // no arguments for this, they're all given later in STDIN
 	case "loc":
-		loc()
-	case "resource":
+		loc() // again, no args required
+	case "resource": // this was short enough to fit in here
 		if len(os.Args) < 3 {
 			fmt.Println("Usage: devl resource <thing>")
 			os.Exit(-1)
 		}
-		data, err := os.ReadFile(DevlDir() + "/resources.json")
+		data, err := os.ReadFile(DevlDir() + "/resources.json") // DevlDir is from ./utils.go
+		// we use it to get the resources from ./recources.json and not CWD/resource.json
+		
 		if err != nil {
 			panic(err)
 		}
 		resources := make(map[string][]string)
-		json.Unmarshal(data, &resources)
+		json.Unmarshal(data, &resources) // unpack the resources
 		for _, resource := range resources[os.Args[2]] {
-			fmt.Println(" . " + resource)
+			fmt.Println(" . " + resource) // and print the ones the user requested
 		}
 
-	case "help":
+	case "help": // help the user
 		fmt.Print(`Usage: devl [<options>] <command> [<args>]
 
 Options:
