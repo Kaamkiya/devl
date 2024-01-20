@@ -2,18 +2,21 @@
 
 # devl
 
-[![](https://img.shields.io/badge/Website-000000.svg?style=for-the-badge&logo=web&logoColor=white)](https://kaamkiya.github.io/devl)
-![](https://img.shields.io/badge/Made-with-Go-%23aaaaff.svg?style=for-the-badge&logo=go&logoColor=white)
+[![](https://img.shields.io/badge/Website-000000.svg?style=for-the-badge&logo=web&logoColor=white)](https://kaamkiya.github.io/devldoc)
+![](https://img.shields.io/badge/Made_with_Go-00ADD8.svg?style=for-the-badge&logo=go&logoColor=white)
 
 ## Table of Contents
 * [About](#about-devl)
 * [Installation](#installation)
   * [Prerequisites](#prerequisites)
+  * [Uninstalling](#uninstalling)
 * [Features](#features)
 * [Contributing](#contributing)
 * [Todo](#todo)
 * [Notes for devs](#notes-for-developers)
 
+
+You can find the web version [here](https://kaamkiya.github.io/devldoc), if you prefer.
 
 ## About devl
 Devl was created as a 
@@ -23,7 +26,7 @@ to cheatsheets, resources, and everything in between, right from the CLI.
 
 Devl stands for DEVeloper + Learn. Only after did I realize that I had a perfect icon :)
 
-Also, because I hate having dependencies with a passion, devl has none.
+Also, because dependencies suck, devl has none.
 
 ## Installation
 ### Prerequisites
@@ -52,9 +55,10 @@ I don't yet know how to do this on Windows. Feel free to open an issue if you do
 
 * Cheatsheets
 * Quizzes
-<!--* Challenges-->
 * Resource finder
 * Gitignore generator
+* Lines of code counter
+<!--* Challenges-->
 
 ## Contributing
 All contributions welcome! See [CONTRIBUTING.md](.github/CONTRIBUTING.md) for details.
