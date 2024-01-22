@@ -35,21 +35,26 @@ don't want to keep it, though.
 * [Git](https://git-scm.com/) is required for cloning the repo.
 * curl is needed to download the script (should be preinstalled. See [here](#no-curl) if you can't use curl.)
 
-On Linux/MacOS, run the following command:
+##### Option 1: go
+
+```bash
+go install github.com/Kaamkiya/devl@main
+```
+
+##### Option 2: curl
+
 ```bash
 curl https://raw.githubusercontent.com/Kaamkiya/devl/main/init.sh | sh
 ```
 
-Not yet available for Windows.
-
 ### Uninstalling
 
-On Linux/MacOS:
+If you installed with curl:
 ```bash
 rm -rf ~/.devl
 ```
 
-I don't yet know how to do this on Windows. Feel free to open an issue if you do.
+I don't yet know how to uninstall with Go. Feel free to make an issue/PR if you do.
 
 ## Features
 
