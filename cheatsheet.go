@@ -6,10 +6,11 @@ import (
 	"net/http"
 )
 
+/*
+Provides the user with a cheatsheet
 
-/* Provides the user with a cheatsheet
-
-Currently sources from learnxinyminutes */
+Currently sources from learnxinyminutes
+*/
 func cheatsheet(lang string) {
 	// get the cheatsheet from learnxinyminutes ...
 	res, err := http.Get("https://raw.githubusercontent.com/adambard/learnxinyminutes-docs/master/" + lang + ".html.markdown")

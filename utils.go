@@ -11,12 +11,14 @@ import (
 	"strings"
 )
 
-/* Get a gitignore template.
+/*
+	Get a gitignore template.
 
-Uses the gitignore.io api*/
+Uses the gitignore.io api
+*/
 func gitignore() {
 	var langs = []string{}
-	
+
 	for {
 		fmt.Print("Enter a language to include in your gitignore (or nothing to complete): ")
 		var in string
@@ -26,7 +28,7 @@ func gitignore() {
 		}
 		langs = append(langs, in)
 	}
-	
+
 	res, err := http.Get("https://www.toptal.com/developers/gitignore/api/" + strings.Join(langs, ","))
 	if err != nil {
 		panic(err)
@@ -38,10 +40,9 @@ func gitignore() {
 	}
 }
 
-
 /* Gets all line of code in a directory and sorts them by file extension.*/
 func loc() {
-	extensions := make(map[string]int64) // make a [string:int] map for the file extensions and line count
+	extensions := make(map[string]int64)                                   // make a [string:int] map for the file extensions and line count
 	filepath.WalkDir(".", func(s string, d fs.DirEntry, err error) error { // walk entire directory recursively
 		if err != nil {
 			panic(err)
@@ -52,8 +53,8 @@ func loc() {
 				panic(err)
 			}
 
-			extension := strings.Split(s, ".")[len(strings.Split(s, ".")) - 1] // get extension
-			if extensions[extension] != 0 { // if there are no lines of code with this extension...
+			extension := strings.Split(s, ".")[len(strings.Split(s, "."))-1] // get extension
+			if extensions[extension] != 0 {                                  // if there are no lines of code with this extension...
 				// add the extension to the map and add the lines of code
 				extensions[extension] = int64(len(strings.Split(string(data), "\n")))
 			} else {
@@ -69,7 +70,9 @@ func loc() {
 	}
 }
 
-/* Gets directory that devl is stored in.
+/*
+	Gets directory that devl is stored in.
+
 Used in ./quiz.go for fetching quizzes and
 ./main.go for fetching resources from ./resources.json
 */

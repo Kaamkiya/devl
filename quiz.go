@@ -11,7 +11,7 @@ import (
 func quiz(lang string) {
 	fmt.Println(lang + " Quiz")
 
-	devlDir := DevlDir() // defined in ./utils.go 
+	devlDir := DevlDir() // defined in ./utils.go
 	// this makes sure we get the quizes from ./quizzes/* and not $CWD/quizzes/*
 
 	data, err := os.ReadFile(devlDir + "/quizzes/" + lang + ".txt")
@@ -19,8 +19,8 @@ func quiz(lang string) {
 		panic(err)
 	}
 	qs := strings.Replace(string(data), "<code>", "\033[38;2;170;170;170m", 100) // so that the code prints in gray
-	qs = strings.Replace(qs, "</code>", "\033[0m", 100) // specifically, rbg(170, 170, 170) or #aaaaaa
-	questions := strings.Split(qs, "---") // split the questions by "---" seperators
+	qs = strings.Replace(qs, "</code>", "\033[0m", 100)                          // specifically, rbg(170, 170, 170) or #aaaaaa
+	questions := strings.Split(qs, "---")                                        // split the questions by "---" seperators
 
 	ansData, err := os.ReadFile(devlDir + "/quizzes/answers.json") // get the answers
 
@@ -45,13 +45,13 @@ func quiz(lang string) {
 	correctAnswers := 0
 	for i, answer := range answers[lang] {
 		if inputs[i] != answer {
-			fmt.Print("\033[31;1m")
+			fmt.Print("\033[31;1m") // print the answer in red if wrong
 		} else {
 			correctAnswers++
-			fmt.Print("\033[32;1m")
+			fmt.Print("\033[32;1m") // otherwise, print it in green
 		}
 
 		fmt.Println(string(i) + ". You inputted: " + inputs[i] + "; Correct answer: " + answer)
 	}
-	fmt.Printf("Score: %d/%d\n", correctAnswers, totalQuestions)
+	fmt.Printf("\033[0;1mScore: %d/%d\n", correctAnswers, totalQuestions)
 }

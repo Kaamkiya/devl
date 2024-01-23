@@ -9,7 +9,7 @@ import (
 func main() {
 	if len(os.Args) == 1 { // if the only argument was devl...
 		fmt.Println("Usage: devl [<options>] <command> [<args>]") // print a simple help message
-		os.Exit(-1) // and exit with error
+		os.Exit(-1)                                               // and exit with error
 	}
 
 	switch os.Args[1] {
@@ -38,7 +38,7 @@ func main() {
 		}
 		data, err := os.ReadFile(DevlDir() + "/resources.json") // DevlDir is from ./utils.go
 		// we use it to get the resources from ./recources.json and not CWD/resource.json
-		
+
 		if err != nil {
 			panic(err)
 		}
