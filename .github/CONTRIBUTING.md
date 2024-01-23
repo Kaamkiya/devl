@@ -3,6 +3,10 @@
 All contributions are welcome! Please *fully* read the guidelines before making
 an issue or pull request.
 
+If you want to make an easy contribution, just add more resources to 
+[resources.json](../resources.json). It's very easy, and I'm always looking for
+more resources :smile:
+
 ## Issues
 
 Feel free to create an issue! Please pick the most appropriate template, or
@@ -23,7 +27,7 @@ or if I were updating a quiz:
 
 `[quiz/nim] Add a quiz about Nim`
 
-... and so on like this. 
+... and so on like this.
 
 Also, please select what type of PR you are making from the list. For example,
 if I were making a pull request for a challenge, it would look like this:
@@ -38,7 +42,11 @@ What type of PR is this?
 
 ```
 
-If adding/updating a quiz, please add all answers to [answers.json](../quizzes/answers.json).
+If adding/updating a quiz, please add all answers to 
+[answers.json](../quizzes/answers.json).
+
+**Please make sure your code follows the [style guide](./STYLEGUIDE.md) before
+submitting a PR.**
 
 ---
 **No swear words, hate, or anything similar. Any contributions not following
