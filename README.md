@@ -65,9 +65,6 @@ I don't yet know how to uninstall with Go. Feel free to make an issue/PR if you 
 * Lines of code counter
 <!--* Challenges-->
 
-## Contributing
-All contributions welcome! See [CONTRIBUTING.md](.github/CONTRIBUTING.md) for details.
-
 ## Todo
 * [ ] Add more quizzes
 * [ ] Add challenges
@@ -75,22 +72,3 @@ All contributions welcome! See [CONTRIBUTING.md](.github/CONTRIBUTING.md) for de
 * [ ] Add README generator
 * [ ] Add Windows compatibility
 
-## Notes for developers
-Structure:
-```
-/devl
-    |____ main.go
-    |____ challenge.go
-    |____ quiz.go
-    |____ init.sh
-    |____ quizzes/
-	     |____ python.txt
-             |____ go.txt
-    |____ challenges/
-             |____ 1.py
-             |____ 1.c
-```
-
-`devl`: main project directory
-`main.go`: main file. This will be passed arguments and such. 
-`quiz.go`: if the requested thing is a quiz, run the quiz
