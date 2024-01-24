@@ -62,5 +62,8 @@ Commands:
   loc           prints the amount of lines of characters by file extension in the current directory
   help		print this help message and exit
 `)
+	default:
+		fmt.Println("Not a valid command. Run `devl help` for help.")
+		os.Exit(-1)
 	}
 }
