@@ -32,8 +32,6 @@ Also, because dependencies suck, devl has none.
 ### Prerequisites
 * [Go](https://go.dev/dl) is required for building the project. You can delete it right after if you
 don't want to keep it, though.
-* [Git](https://git-scm.com/) is required for cloning the repo.
-* curl is needed to download the script (should be preinstalled. See [here](#no-curl) if you can't use curl.)
 
 ##### Option 1: go
 
@@ -42,6 +40,8 @@ go install github.com/Kaamkiya/devl@main
 ```
 
 ##### Option 2: curl
+
+Requires curl to get the installation script and git to clone the repo.
 
 ```bash
 curl https://raw.githubusercontent.com/Kaamkiya/devl/main/init.sh | sh
