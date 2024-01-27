@@ -5,7 +5,8 @@ an issue or pull request.
 
 If you want to make an easy contribution, just add more resources to 
 [resources.json](../resources.json). It's very easy, and I'm always looking for
-more resources :smile:
+more resources :smile:. **However**, you may only add libraries or frameworks
+if they have 5000+ Github stars.
 
 ## Issues
 
