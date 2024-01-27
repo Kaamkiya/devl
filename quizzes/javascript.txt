@@ -87,7 +87,7 @@ C) Error
 
 ---
 
-9. The <code>getMonth</code> returns the month as a...
+9. The <code>Date.getMonth</code> function returns the month as a...
 
 A) string
 B) array
