@@ -2,7 +2,7 @@
 
 # devl
 
-[![](https://img.shields.io/badge/Website-000000.svg?style=for-the-badge&logo=web&logoColor=white)](https://kaamkiya.github.io/devldoc)
+[![](https://img.shields.io/badge/Website-000000.svg?style=for-the-badge)](https://kaamkiya.github.io/devldoc)
 ![](https://img.shields.io/badge/Made_with_Go-00ADD8.svg?style=for-the-badge&logo=go&logoColor=white)
 
 ## Table of Contents
@@ -13,7 +13,6 @@
 * [Features](#features)
 * [Contributing](#contributing)
 * [Todo](#todo)
-* [Notes for devs](#notes-for-developers)
 
 
 You can find the web version [here](https://kaamkiya.github.io/devldoc), if you prefer.
@@ -33,13 +32,13 @@ Also, because dependencies suck, devl has none.
 * [Go](https://go.dev/dl) is required for building the project. You can delete it right after if you
 don't want to keep it, though.
 
-##### Option 1: go
+#### Option 1: go
 
 ```bash
 go install github.com/Kaamkiya/devl@main
 ```
 
-##### Option 2: curl
+#### Option 2: curl
 
 Requires curl to get the installation script and git to clone the repo.
 
@@ -65,10 +64,20 @@ I don't yet know how to uninstall with Go. Feel free to make an issue/PR if you 
 * Lines of code counter
 <!--* Challenges-->
 
+## Contributing
+
+Contributions are welcome! Note that they will only be accepted if they follow 
+the [Code of Conduct](.github/CODE_OF_CONDUCT.md), and the [style guide](.github/STYLEGUIDE.md).
+
+See the [Contributing guidelines](.github/CONTRIBUTING.md) for more info.
+
+## License
+
+This project uses the [MIT License](LICENSE.txt).
+
 ## Todo
 * [ ] Add more quizzes
 * [ ] Add challenges
 * [ ] Self-host cheatsheets instead of sourcing learnxinyminutes
 * [ ] Add README generator
-* [ ] Add Windows compatibility
 
