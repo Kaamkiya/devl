@@ -47,6 +47,7 @@ func main() {
 		for _, resource := range resources[os.Args[2]] {
 			fmt.Println(" . " + resource) // and print the ones the user requested
 		}
+		fmt.Println("Or you can Google it: https://google.com/search?q=" + os.Args[2])
 
 	case "help": // help the user
 		fmt.Print(`Usage: devl [<options>] <command> [<args>]
