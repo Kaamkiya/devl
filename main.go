@@ -45,7 +45,7 @@ func main() {
 		resources := make(map[string][]string)
 		json.Unmarshal(data, &resources) // unpack the resources
 		for _, resource := range resources[os.Args[2]] {
-			fmt.Println(" . " + resource) // and print the ones the user requested
+			fmt.Println(" • " + resource) // and print the ones the user requested
 		}
 		fmt.Println("Or you can Google it: https://google.com/search?q=" + os.Args[2])
 
