@@ -8,7 +8,7 @@
   "ats":            ["https://learnxinyminutes.com/docs/ATS/"],
   "awk":            ["https://learnxinyminutes.com/docs/awk/", "https://developer.ibm.com/tutorials/l-awk1/", "https://exercism.org/tracks/awk"],
   "ballerina":      ["https://learnxinyminutes.com/docs/ballerina/", "https://ballerina.io/learn/", "https://exercism.org/tracks/ballerina"],
-  "bash":           ["https://learnxinyminutes.com/bash", "https://linuxhint.com/30_bash_script_examples/", "https://devhints.io/bash", "https://exercism.org/tracks/bash"],
+  "bash":           ["https://learnxinyminutes.com/docs/bash", "https://linuxhint.com/30_bash_script_examples/", "https://devhints.io/bash", "https://exercism.org/tracks/bash"],
   "c":              ["https://learnxinyminutes.com/docs/c/", "https://devdocs.io/c/", "https://exercism.org/tracks/c"],
   "c#":             ["https://learnxinyminutes.com/docs/csharp", "https://learn.microsoft.com/en-us/dotnet/csharp/", "https://devhints.io/csharp7", "https://exercism.org/tracks/csharp"],
   "c++":            ["https://learnxinyminutes.com/docs/c++/", "https://devdocs.io/cpp", "https://exercism.org/tracks/cpp"],
