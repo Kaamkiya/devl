@@ -51,7 +51,7 @@ func quiz(lang string) {
 			fmt.Print("\033[32;1m") // otherwise, print it in green
 		}
 
-		fmt.Println(string(i) + ". You inputted: " + inputs[i] + "; Correct answer: " + answer)
+		fmt.Println(string(i) + "• You inputted: " + inputs[i] + "; Correct answer: " + answer)
 	}
 	fmt.Printf("\033[0;1mScore: %d/%d\n", correctAnswers, totalQuestions)
 }
