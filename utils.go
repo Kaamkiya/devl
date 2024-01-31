@@ -39,11 +39,11 @@ func gitignore() {
 	for scanner.Scan() {
 		gitignore += scanner.Text()
 	}
-	
+
 	fmt.Println(gitignore)
 
 	if includes(os.Args, "--write") || includes(os.Args, "-w") {
-		f, err := os.Create("./.gitignore"))
+		f, err := os.Create("./.gitignore")
 		if err != nil {
 			panic(err)
 		}
@@ -98,7 +98,6 @@ func DevlDir() string {
 	}
 	return filepath.Dir(filename)
 }
-
 
 /*
 Check if array contains item
