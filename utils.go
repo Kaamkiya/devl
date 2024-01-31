@@ -12,7 +12,7 @@ import (
 )
 
 /*
-	Get a gitignore template.
+Get a gitignore template.
 
 Uses the gitignore.io api
 */
@@ -35,8 +35,23 @@ func gitignore() {
 	}
 	defer res.Body.Close()
 	scanner := bufio.NewScanner(res.Body)
+	var gitignore string
 	for scanner.Scan() {
-		fmt.Println(scanner.Text())
+		gitignore += scanner.Text()
+	}
+	
+	fmt.Println(gitignore)
+
+	if includes(os.Args, "--write") || includes(os.Args, "-w") {
+		f, err := os.Create("./.gitignore"))
+		if err != nil {
+			panic(err)
+		}
+		defer f.Close()
+
+		f.WriteString(gitignore)
+
+		fmt.Println("\033[32;1mWrote gitignore to ./.gitignore\033[0m")
 	}
 }
 
@@ -82,4 +97,17 @@ func DevlDir() string {
 		panic("Somehow, this file does not exist.")
 	}
 	return filepath.Dir(filename)
+}
+
+
+/*
+Check if array contains item
+*/
+func includes(arr []string, item string) bool {
+	for _, i := range arr {
+		if i == item {
+			return true
+		}
+	}
+	return false
 }
