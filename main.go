@@ -1,3 +1,11 @@
+/* Main file for devl
+
+This is what recieves command line arguments and decides what to do (ie, quiz,
+print resources, etc)
+
+v1.0.8
+*/
+
 package main
 
 import (
