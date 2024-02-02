@@ -37,7 +37,7 @@ func gitignore() {
 	scanner := bufio.NewScanner(res.Body)
 	var gitignore string
 	for scanner.Scan() {
-		gitignore += scanner.Text()
+		gitignore += scanner.Text() + "\n"
 	}
 
 	fmt.Println(gitignore)
