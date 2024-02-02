@@ -57,7 +57,7 @@ func gitignore() {
 
 /* Gets all line of code in a directory and sorts them by file extension.*/
 func loc() {
-	extensions := make(map[string]int64)                                   // make a [string:int] map for the file extensions and line count
+	extensions := make(map[string]int)                                   // make a [string:int] map for the file extensions and line count
 	filepath.WalkDir(".", func(s string, d fs.DirEntry, err error) error { // walk entire directory recursively
 		if err != nil {
 			panic(err)
@@ -71,10 +71,10 @@ func loc() {
 			extension := strings.Split(s, ".")[len(strings.Split(s, "."))-1] // get extension
 			if extensions[extension] != 0 {                                  // if there are no lines of code with this extension...
 				// add the extension to the map and add the lines of code
-				extensions[extension] = int64(len(strings.Split(string(data), "\n")))
+				extensions[extension] += len(strings.Split(string(data), "\n"))
 			} else {
 				// otherwise, increment the count
-				extensions[extension] += int64(len(strings.Split(string(data), "\n")))
+				extensions[extension] = len(strings.Split(string(data), "\n"))
 			}
 		}
 		return nil
