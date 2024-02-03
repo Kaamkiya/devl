@@ -62,7 +62,7 @@ I don't yet know how to uninstall with Go. Feel free to make an issue/PR if you 
 * Resource finder
 * Gitignore generator
 * Lines of code counter
-<!--* Challenges-->
+* Challenges
 
 ## Contributing
 
@@ -77,7 +77,6 @@ This project uses the [MIT License](LICENSE.txt).
 
 ## Todo
 * [ ] Add more quizzes
-* [ ] Add challenges
-* [ ] Self-host cheatsheets instead of sourcing learnxinyminutes
+* [ ] Add more challenges
 * [ ] Add README generator
 
