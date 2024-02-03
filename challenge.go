@@ -12,7 +12,19 @@ func challenge() {
 		os.Exit(0)
 	}
 
-	_, err := exec.Command("/usr/bin/gcc", "-o", "/tmp/a.out", DevlDir() + "/challenges/" + string(os.Args[2]) + "." + os.Args[3]).Output()
+	langName := os.Args[3]
+	challengeId := os.Args[2]
+	var compiler string
+	switch langName {
+	case "c":
+		compiler = "gcc"
+	case "cpp":
+		compiler = "g++"
+	case "go":
+		compiler = "go build"
+	}
+
+	_, err := exec.Command("/usr/bin/env", compiler, "-o", "/tmp/a.out", DevlDir() + "/challenges/" + langName + "/" + string(challengeId) + "." + langName).Output()
 	if err != nil {
 		fmt.Print("Exec error: ")
 		panic(err)
