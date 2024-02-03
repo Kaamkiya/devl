@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"os"
 	"os/exec"
@@ -8,7 +9,15 @@ import (
 
 func challenge() {
 	if includes(os.Args, "--list") || includes(os.Args, "-l") {
-		fmt.Println("") // TODO: print all challenges and their names
+		data, err := os.ReadFile(DevlDir() + "/challenges.json")
+		if err != nil {
+			panic(err)
+		}
+		var challenges []string
+		json.Unmarshal(data, &challenges)
+		for i, name := range challenges {
+			fmt.Printf("%d. %s\n", i + 1, name)
+		}
 		os.Exit(0)
 	}
 
@@ -24,17 +33,15 @@ func challenge() {
 		compiler = "go build"
 	}
 
-	_, err := exec.Command("/usr/bin/env", compiler, "-o", "/tmp/a.out", DevlDir() + "/challenges/" + langName + "/" + string(challengeId) + "." + langName).Output()
+	fmt.Println("/usr/bin/env", compiler, "-o", "/tmp/a.out", DevlDir() + "/challenges/" + langName + "/" + string(challengeId) + "." + langName)
+	out, err := exec.Command("/usr/bin/env", compiler, "-o", "/tmp/a.out", DevlDir() + "/challenges/" + langName + "/" + string(challengeId) + "." + langName).Output()
+	fmt.Println(string(out))
 	if err != nil {
 		fmt.Print("Exec error: ")
 		panic(err)
 	}
-	out, err := exec.Command("/tmp/a.out").Output()
+	out, err = exec.Command("/tmp/a.out").Output()
 	fmt.Println(string(out))
-	if err != nil {
-		fmt.Print("/tmp err: ")
-		panic(err)
-	}
 	if string(out) == "" {
 		fmt.Println("\033[32;1mCorrect!")
 	}
