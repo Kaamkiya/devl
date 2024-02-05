@@ -35,6 +35,15 @@ func main() {
 		}
 		cheatsheet(os.Args[2])
 		os.Exit(0)
+	case "license":
+		if len(os.Args) < 3 {
+			fmt.Println("Usage: devl license <license_name>")
+			fmt.Println("use it with -w to write it to ./LICENSE.txt")
+			fmt.Println("use it with the identifier found at https://spdx.org/licenses/")
+			os.Exit(-1)
+		}
+		license(os.Args[2])
+		os.Exit(0)
 	case "gitignore":
 		gitignore() // no arguments for this, they're all given later in STDIN
 	case "loc":

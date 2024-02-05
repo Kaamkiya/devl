@@ -110,3 +110,32 @@ func includes(arr []string, item string) bool {
 	}
 	return false
 }
+
+/*
+Get a License from SPDX
+
+https://spdx.org/licenses/
+*/
+func license(name string) {
+	res, err := http.Get("https://raw.githubusercontent.com/spdx/license-list-data/main/text/" + name + ".txt")
+	if err != nil {
+		panic(err)
+	}
+	defer res.Body.Close()
+
+	var text string
+	scanner := bufio.NewScanner(res.Body)
+	for scanner.Scan() {
+		text += scanner.Text() + "\n"
+	}
+	fmt.Println(text)
+
+	if includes(os.Args, "-w") {
+		f, err := os.Create("LICENSE.txt")
+		if err != nil {
+			panic(err)
+		}
+		f.WriteString(text)
+		fmt.Println("\033[32;1mWrote license to ./LICENSE.txt\033[0m")
+	}
+}
