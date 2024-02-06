@@ -79,6 +79,7 @@ Commands:
   cheatsheet    print a cheatsheet for the parameter passed to <args>
   gitignore     print a gitignore for the languages you enter
   resource      print a list of links to resources for your topic
+  license       fetch a license from https://spdx.org/licenses/
   loc           prints the amount of lines of characters by file extension in the current directory
   help		print this help message and exit
 `)
