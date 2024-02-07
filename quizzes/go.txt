@@ -63,3 +63,9 @@ B) Google
 C) Apple
 D) Amazon
 
+---
+8. How do you do a while loop in Golang?
+
+A) <code>while (true) { print("x") }</code>
+B) <code>while true { print("x") }</code>
+C) <code>for true { print("x") }</code>
