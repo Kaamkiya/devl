@@ -1,0 +1,65 @@
+1. Which tool is used to format Go code?
+
+A) <code>gofix</code>
+B) <code>golint</code>
+C) <code>gofmt</code>
+D) <code>goformat</code>
+E) <code>go-fmt</code>
+
+---
+2. Does Go use <code>camelCase</code> or <code>snake_case</code>?
+
+A) <code>camelCase</code>
+B) <code>snake_case</code>
+
+---
+3. What is the zero value for a string in Go?
+
+A) <code>"0"</code>
+B) <code>nil</code>
+C) <code>""</code>
+D) <code>" "</code>
+
+---
+4. Which keyword is used to import packages in Go?
+
+A) <code>include</code>
+B) <code>package</code>
+C) <code>import</code>
+D) <code>require</code>
+E) <code>use</code>
+F) <code>using</code>
+
+---
+5. What does the following code output?
+
+<code>
+package main
+import "fmt"
+func main() {
+    defer fmt.Println("World")
+    fmt.Println("Hello")
+}
+</code>
+
+A) Hello World
+B) World Hello
+C) Hello
+D) World
+
+---
+6. How do you append to a slice in Go?
+
+A) <code>s.append(1)</code>
+B) <code>s = append(s, 1)</code>
+C) <code>s += 1</code>
+D) <code>s.push(1)</code>
+
+---
+7. Where was the language created?
+
+A) Microsoft
+B) Google
+C) Apple
+D) Amazon
+
