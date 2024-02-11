@@ -80,7 +80,7 @@ func readme() {
 	readme += "\n"
 	if license != "" {
 		readme += "## License\n\n"
-		readme += "This project uses the " + license + "License.\n"
+		readme += "This project uses the " + license + " License.\n"
 	}
 
 	fmt.Println("-----------------------------")
