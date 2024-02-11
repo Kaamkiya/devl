@@ -15,7 +15,8 @@
 * [Todo](#todo)
 
 
-You can find the web version [here](https://kaamkiya.github.io/devldoc), if you prefer.
+You can find the web version [here](https://kaamkiya.github.io/devldoc), if you
+prefer.
 
 ## About devl
 Devl was created as a 
@@ -23,12 +24,15 @@ Devl was created as a
 people learn to code. It was also built so that everyone would have easy access
 to cheatsheets, resources, and everything in between, right from the CLI.
 
-Devl stands for DEVeloper + Learn. Only after did I realize that I had a perfect icon :)
+Devl stands for DEVeloper + Learn. Only after did I realize that I had a
+perfect icon :)
 
 Also, because dependencies suck, devl has none.
 
 ## Installation
+
 ### Prerequisites
+
 * [Go](https://go.dev/dl) is required for building the project. You can delete it right after if you
 don't want to keep it, though.
 
@@ -61,6 +65,7 @@ I don't yet know how to uninstall with Go. Feel free to make an issue/PR if you 
 * Quizzes
 * Resource finder
 * Gitignore generator
+* README generator
 * Lines of code counter
 * Challenges
 
@@ -78,5 +83,4 @@ This project uses the [MIT License](LICENSE.txt).
 ## Todo
 * [ ] Add more quizzes
 * [ ] Add more challenges
-* [ ] Add README generator
 
