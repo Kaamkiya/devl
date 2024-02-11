@@ -48,6 +48,8 @@ func main() {
 		gitignore() // no arguments for this, they're all given later in STDIN
 	case "loc":
 		loc() // again, no args required
+	case "readme":
+		readme()
 	case "challenge":
 		challenge()
 	case "resource": // this was short enough to fit in here
