@@ -2,6 +2,18 @@
 
 # devl
 
+## THIS PROJECT IS NO LONGER MAINTAINED
+
+For a couple of reasons:
+
+1. [Giving up GitHub](https://sfconservancy.org/GiveUpGitHub/)
+2. It was made entirely for me to learn how to code, and now I realize how bad it is.
+3. It's horrible.
+
+You can still use it, but nothing more will happen. No bug fixes, et cetera, et cetera.
+
+---
+
 [![](https://img.shields.io/badge/Website-000000.svg?style=for-the-badge)](https://kaamkiya.github.io/devldoc)
 ![](https://img.shields.io/badge/Made_with_Go-00ADD8.svg?style=for-the-badge&logo=go&logoColor=white)
 
